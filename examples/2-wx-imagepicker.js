@@ -29,7 +29,7 @@ class UploadImgExamples extends Component {
         return value.url;
     }
 
-    uploadImage(serverId, callback) {
+    uploadImage(serverId, localId, callback) {
         setTimeout(()=> {
             callback({url: serverId})
         }, 300)
@@ -41,8 +41,8 @@ class UploadImgExamples extends Component {
 
     render() {
         return (
-            <div  style={{maxWidth: 400,margin:20}}>
-                <Loading loading={this.state.loading} />
+            <div style={{maxWidth: 400,margin:20}}>
+                <Loading loading={this.state.loading}/>
                 <WxFlowLayoutImagePicker
                     max={11}
                     getImageUrl={this.getImageUrl.bind(this)}

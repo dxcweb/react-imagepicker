@@ -55,7 +55,7 @@ export default class WxFlowLayoutImagePicker extends Component {
             success: function (res) {
                 const serverId = res.serverId; // 返回图片的服务器端ID
                 //上传图片
-                uploadImage(serverId, (value)=> {
+                uploadImage(serverId, localId, (value)=> {
                     if (value)
                         callback(value);
                     if (localIds.length > 0) {
