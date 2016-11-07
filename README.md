@@ -91,6 +91,24 @@ npm start
   </thead>
 <tbody>
     <tr>
+      <td>chooseImageCount</td>
+      <td>Int</td>
+      <td>9</td>
+      <td>一次选择多少张</td>
+    </tr>
+    <tr>
+      <td>chooseImageSizeType</td>
+      <td>Array</td>
+      <td>['original', 'compressed']</td>
+      <td>可以指定是原图还是压缩图，默认二者都有</td>
+    </tr>
+    <tr>
+      <td>chooseImageSourceType</td>
+      <td>Array</td>
+      <td>['album', 'camera']</td>
+      <td>可以指定来源是相册还是相机，默认二者都有</td>
+    </tr>
+    <tr>
       <td>max</td>
       <td>Int</td>
       <td>null</td>
