@@ -1,0 +1,42 @@
+{
+  "name": "react-imagepicker",
+  "version": "0.0.1",
+  "description": "react 版本图片选择器，提供图片选择器接口，流布局图片选择器，将来提供更多布局的图片选择器。",
+  "keywords": [
+    "react-imagepicker",
+    "imagepicker",
+    "react"
+  ],
+  "homepage": "https://github.com/dxcweb/react-imagepicker",
+  "maitainers": [
+    "605863278@qq.com"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dxcweb/react-imagepicker.git"
+  },
+  "licenses": "MIT",
+  "config": {
+    "port": 8202
+  },
+  "scripts": {
+    "build": "rc-tools run build",
+    "start": "rc-tools run server",
+    "pub": "rc-tools run pub"
+  },
+  "devDependencies": {
+    "rc-tools": "5.x",
+    "react": "^15.2.1",
+    "react-dom": "^15.2.1",
+    "react-speed": "^0.0.8"
+  },
+  "dependencies": {
+    "react-jiugongge": "^0.0.2"
+  },
+  "files": [
+    "example",
+    "lib",
+    "src"
+  ],
+  "main": "./lib"
+}
