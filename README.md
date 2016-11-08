@@ -130,12 +130,6 @@ npm start
       <td>getImageUrl</td>
       <td>Func</td>
       <td>null</td>
-      <td>传入一个图片信息需返回该图片的URL</td>
-    </tr>
-	<tr>
-      <td>getImageUrl</td>
-      <td>Func</td>
-      <td>null</td>
       <td>传入一个图片信息和类型需返回该图片的URL，类型为：preview或list</td>
     </tr>
 	<tr>

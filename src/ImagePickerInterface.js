@@ -60,7 +60,7 @@ export default class ImagePickerInterface extends Component {
         }
         const values = this.getValues();
         if (img instanceof Array) {
-            for (let value of img) {
+            for (let i = 0, value; value = img[i]; i++) {
                 values.push(value);
             }
         } else {
@@ -88,7 +88,7 @@ export default class ImagePickerInterface extends Component {
         if (max) {
             surplus = max - values.length;
         }
-        onAddImage(this.addImage.bind(this),surplus);
+        onAddImage(this.addImage.bind(this), surplus);
     }
 
     onChangeImage(index, oldValue) {

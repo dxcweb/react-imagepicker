@@ -74,13 +74,15 @@ export default class WxFlowLayoutImagePicker extends Component {
     }
 
     onPreviewImage(currentValue, values, i) {
+
         const urls = [];
         const me = this;
         const {getImageUrl} = this.props;
-        for (let value of values) {
+        for (let i = 0, value; value = values[i]; i++) {
             urls.push(getImageUrl(value, 'preview'));
         }
         const current = urls[i];
+
         wx.previewImage({current, urls});
     }
 

@@ -18,6 +18,9 @@ window.wx = {
         setTimeout(()=> {
             param.success({serverId: param.localId})
         }, 200)
+    },
+    previewImage(){
+        alert('点击了预览');
     }
 };
 class UploadImgExamples extends Component {
