@@ -75,6 +75,12 @@ npm start
       <td>null</td>
       <td>图片信息修改后调用onChange(values) （非必填，提供给form组件使用）</td>
     </tr>
+	<tr>
+      <td>readOnly</td>
+      <td>bool</td>
+      <td>false</td>
+      <td>只读</td>
+    </tr>
 </tbody>
 </table>
 
@@ -155,6 +161,12 @@ npm start
       <td>Func</td>
       <td>null</td>
       <td>图片信息修改后调用onChange(values) （非必填，提供给form组件使用）</td>
+    </tr>
+	<tr>
+      <td>readOnly</td>
+      <td>bool</td>
+      <td>false</td>
+      <td>只读</td>
     </tr>
 </tbody>
 </table>
