@@ -25,7 +25,8 @@ window.wx = {
 };
 class UploadImgExamples extends Component {
     state = {
-        loading: false
+        loading: false,
+        readOnly: false
     };
 
     getImageUrl(value) {
@@ -42,6 +43,10 @@ class UploadImgExamples extends Component {
         this.setState({loading})
     }
 
+    onReadOnly() {
+        this.setState({readOnly: !this.state.readOnly});
+    }
+
     render() {
         return (
             <div style={{maxWidth: 400,margin:20}}>
@@ -51,7 +56,9 @@ class UploadImgExamples extends Component {
                     getImageUrl={this.getImageUrl.bind(this)}
                     uploadImage={this.uploadImage.bind(this)}
                     onLoading={this.onLoading.bind(this)}
+                    readOnly={this.state.readOnly}
                 />
+                <button onClick={this.onReadOnly.bind(this)} style={{marginTop:20}}>只读(切换)</button>
             </div>
         )
     }

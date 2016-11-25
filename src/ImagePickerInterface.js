@@ -2,6 +2,7 @@
  * Created by dxc on 2016/11/5.
  */
 import React, {Component, PropTypes} from 'react';
+import {clone} from 'lodash'
 export default class ImagePickerInterface extends Component {
     static propTypes = {
         RootComponent: PropTypes.func.isRequired,
@@ -33,7 +34,9 @@ export default class ImagePickerInterface extends Component {
         addProps: null,
 
         ImageComponent: null,
-        imageProps: null
+        imageProps: null,
+
+        readOnly: false
     };
     state = {
         value: []
@@ -41,9 +44,9 @@ export default class ImagePickerInterface extends Component {
     //从props或state中获取value
     getValues() {
         if (this.props.value != null) {
-            return this.props.value;
+            return clone(this.props.value);
         } else {
-            return this.state.value;
+            return clone(this.state.value);
         }
     }
 
@@ -100,7 +103,7 @@ export default class ImagePickerInterface extends Component {
     }
 
     item() {
-        const {ItemComponent, itemProps, AddComponent, addProps, ImageComponent, imageProps, max, getImageUrl, onPreviewImage}=this.props;
+        const {readOnly, ItemComponent, itemProps, AddComponent, addProps, ImageComponent, imageProps, max, getImageUrl, onPreviewImage}=this.props;
         const values = this.getValues();
 
         const len = values.length;
@@ -112,6 +115,7 @@ export default class ImagePickerInterface extends Component {
             items.push(<ItemComponent key={i} {...itemProps}>
                 <ImageComponent
                     url={url}
+                    readOnly={readOnly}
                     value={value}
                     onPreviewImage={()=>{
                         onPreviewImage(values[i],values,i);
@@ -122,7 +126,7 @@ export default class ImagePickerInterface extends Component {
                 />
             </ItemComponent>);
         }
-        if (isShowAdd) {
+        if (isShowAdd && !readOnly) {
             items.push(<ItemComponent key={-999} {...itemProps}>
                 <AddComponent {...addProps} onAddImage={this.onAddImage.bind(this)}/>
             </ItemComponent>);

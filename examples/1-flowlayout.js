@@ -5,6 +5,10 @@ import React, {Component, PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 import {FlowLayoutImagePicker} from 'react-imagepicker';
 class FlowLayout extends Component {
+    state = {
+        readOnly: false
+    };
+
     getImageUrl(value) {
         return value;
     }
@@ -16,14 +20,21 @@ class FlowLayout extends Component {
     onPreviewImage(value, values, i) {
         console.log('onPreviewImage', value, values, i)
     }
+
+    onReadOnly() {
+        this.setState({readOnly: !this.state.readOnly});
+    }
+
     render() {
         return (
-            <div  style={{maxWidth: 400,margin:20}}>
+            <div style={{maxWidth: 400,margin:20}}>
                 <FlowLayoutImagePicker
                     getImageUrl={this.getImageUrl.bind(this)}
                     onAddImage={this.onAddImage.bind(this)}
                     onPreviewImage={this.onPreviewImage.bind(this)}
+                    readOnly={this.state.readOnly}
                 />
+                <button onClick={this.onReadOnly.bind(this)} style={{marginTop:20}}>只读(切换)</button>
             </div>
         )
     }

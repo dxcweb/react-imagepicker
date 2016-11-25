@@ -1,6 +1,6 @@
 {
   "name": "react-imagepicker",
-  "version": "0.0.4",
+  "version": "0.0.9",
   "description": "react 版本图片选择器，提供图片选择器接口，流布局图片选择器，将来提供更多布局的图片选择器。",
   "keywords": [
     "react-imagepicker",
@@ -28,10 +28,11 @@
     "rc-tools": "5.x",
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
-    "react-speed": "^0.0.8"
+    "react-speed": "^0.0.9"
   },
   "dependencies": {
-    "react-jiugongge": "^0.0.4"
+    "lodash": "^4.16.6",
+    "react-jiugongge": "^0.0.5"
   },
   "files": [
     "example",

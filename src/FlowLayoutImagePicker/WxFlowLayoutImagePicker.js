@@ -21,7 +21,13 @@ export default class WxFlowLayoutImagePicker extends Component {
         },
         value: null,
         onChange: ()=> {
-        }
+        },
+        AddComponent: undefined,
+        addProps: undefined,
+
+        ImageComponent: undefined,
+        imageProps: undefined,
+        readOnly: false
     };
 
     onAddImage(callback, surplus) {
@@ -87,7 +93,7 @@ export default class WxFlowLayoutImagePicker extends Component {
     }
 
     render() {
-        const {max, column, spacing, getImageUrl, value, onChange}=this.props;
+        const {readOnly, max, column, spacing, value, onChange, AddComponent, addProps, ImageComponent, imageProps}=this.props;
         return (
             <div>
                 <FlowLayoutImagePicker
@@ -99,6 +105,11 @@ export default class WxFlowLayoutImagePicker extends Component {
                     onPreviewImage={this.onPreviewImage.bind(this)}
                     value={value}
                     onChange={onChange}
+                    AddComponent={AddComponent}
+                    addProps={addProps}
+                    ImageComponent={ImageComponent}
+                    imageProps={imageProps}
+                    readOnly={readOnly}
                 />
             </div>
         )

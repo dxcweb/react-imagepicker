@@ -11,20 +11,26 @@ export default class FlowLayoutImagePicker extends Component {
         max: null,
         column: 4,
         spacing: 12,
-        getImageUrl: ()=> {},
+        getImageUrl: ()=> {
+        },
         onAddImage: ()=> {
         },
         onPreviewImage: ()=> {
         },
         value: null,
         onChange: ()=> {
-        }
+        },
+        AddComponent: AddComponent,
+        addProps: undefined,
+
+        ImageComponent: ImageComponent,
+        imageProps: undefined,
+        readOnly: false
     };
 
     render() {
-        const {max, column, spacing, getImageUrl, onAddImage, onPreviewImage, value, onChange}=this.props;
+        const {readOnly, max, column, spacing, getImageUrl, onAddImage, onPreviewImage, value, onChange, AddComponent, addProps, ImageComponent, imageProps}=this.props;
         const rootProps = {
-
             column: column,
             height: 'width',
             horizontalSpacing: spacing,
@@ -39,11 +45,14 @@ export default class FlowLayoutImagePicker extends Component {
                     getImageUrl={getImageUrl}
                     ItemComponent={JiugonggeItem}
                     AddComponent={AddComponent}
+                    addProps={addProps}
                     onAddImage={onAddImage}
                     ImageComponent={ImageComponent}
+                    itemProps={imageProps}
                     onPreviewImage={onPreviewImage}
                     value={value}
                     onChange={onChange}
+                    readOnly={readOnly}
                 />
             </div>
         )
