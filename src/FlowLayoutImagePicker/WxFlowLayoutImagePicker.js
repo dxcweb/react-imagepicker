@@ -1,7 +1,7 @@
 /**
  * Created by dxc on 2016/11/6.
  */
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
 import FlowLayoutImagePicker from  './FlowLayoutImagePicker';
 export default class WxFlowLayoutImagePicker extends Component {
     static defaultProps = {

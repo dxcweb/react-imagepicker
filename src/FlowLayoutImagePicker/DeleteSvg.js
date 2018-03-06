@@ -1,7 +1,7 @@
 /**
  * Created by dxc on 2016/11/4.
  */
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
 export default class CloseSvg extends React.Component {
     render() {
         const {size="25%", ...other}=this.props;

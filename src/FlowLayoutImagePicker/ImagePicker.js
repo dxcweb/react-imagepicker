@@ -1,7 +1,7 @@
 /**
  * Created by dxc on 2016/11/5.
  */
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
 import Jiugongge, {JiugonggeItem} from 'react-jiugongge';
 import AddComponent from './AddComponent'
 import ImageComponent from './ImageComponent'

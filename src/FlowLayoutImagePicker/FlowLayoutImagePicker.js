@@ -1,7 +1,7 @@
 /**
  * Created by dxc on 2016/11/6.
  */
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
 import ImagePickerInterface from '../ImagePickerInterface'
 import Jiugongge, {JiugonggeItem} from 'react-jiugongge';
 import AddComponent from './AddComponent'

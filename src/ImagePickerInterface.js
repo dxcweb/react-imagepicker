@@ -1,15 +1,9 @@
 /**
  * Created by dxc on 2016/11/5.
  */
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
 import {clone} from 'lodash'
 export default class ImagePickerInterface extends Component {
-    static propTypes = {
-        RootComponent: PropTypes.func.isRequired,
-        ItemComponent: PropTypes.func.isRequired,
-        AddComponent: PropTypes.func.isRequired,
-        ImageComponent: PropTypes.func.isRequired
-    };
     static defaultProps = {
         onAddImage: (callback)=> {
         },
